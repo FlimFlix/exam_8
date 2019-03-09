@@ -4,6 +4,7 @@ import {Switch, Route} from 'react-router';
 import './App.css';
 import TaskList from "./containers/TaskList/TaskList";
 import TaskDetail from "./containers/TaskDetail/TaskDetail";
+import TaskAdd from "./containers/TaskAdd/TaskAdd";
 
 
 class App extends Component {
@@ -12,6 +13,7 @@ class App extends Component {
             <div className="container">
                 <BrowserRouter>
                     <Switch>
+                        <Route path="/tasks/add" component={TaskAdd}/>
                         <Route path="/tasks/:id" component={TaskDetail}/>
                         <Route path="/"  component={TaskList}/>
                     </Switch>

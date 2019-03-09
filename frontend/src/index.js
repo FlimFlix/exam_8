@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios';
 import {BASE_URL} from "./api-urls";
+import 'react-datepicker/dist/react-datepicker.css';
 
 
 axios.defaults.baseURL = BASE_URL;

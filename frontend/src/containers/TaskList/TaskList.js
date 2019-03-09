@@ -21,7 +21,8 @@ class TaskList extends Component {
         return <Fragment>
             <p><NavLink to='/tasks/add'>Добавить задачу</NavLink></p>
             <div className='row'>
-                <div className='col-md'>
+
+                <div className='col-md'><h1>Очередь</h1>
                     {this.state.tasks.map(task => {
                         if (task.status === 'turn') {
                             return <div key={task.id}>
@@ -30,7 +31,7 @@ class TaskList extends Component {
                         }
                     })}
                 </div>
-                <div className='col-md'>
+                <div className='col-md'><h1>В работе</h1>
                     {this.state.tasks.map(task => {
                         if (task.status === 'underway') {
                             return <div key={task.id}>
@@ -39,7 +40,7 @@ class TaskList extends Component {
                         }
                     })}
                 </div>
-                <div className='col-md'>
+                <div className='col-md'><h1>Сделано</h1>
                     {this.state.tasks.map(task => {
                         if (task.status === 'done') {
                             return <div key={task.id}>
